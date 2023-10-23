@@ -10,6 +10,13 @@
   Pokemon is NOT cool?
 </label>
 
+<label>Pokemon Type:
+  <select name="pokemonType" [ngModel]="pokemon.name">
+    <option *ngFor="let type of pokemonType" [value]="type.value" [selected]="type.value === pokemon.type"> {{ type.value  }}</option>
+  </select>
+</label>
+
+
 <label>
   <input type="checkbox" name="acceptTerms" [(ngModel)]="pokemon.acceptTerms"> 
   Please check to accept terms.
